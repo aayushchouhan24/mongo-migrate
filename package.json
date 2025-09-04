@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node src/index.js",
     "start:prod": "NODE_ENV=production node src/index.js",
-  "dev": "nodemon src/index.js",
+    "dev": "nodemon src/index.js",
+    "build": "echo 'No build step required'",
+    "vercel-build": "echo 'Build completed'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -1,34 +1,88 @@
-# MongoDB Backup & Management API
+# MongoMigrate
 
-A full-fledged Express.js application for MongoDB database backup and management operations.
+A modern web-based MongoDB database migration and backup tool with an intuitive interface.
 
 ## Features
 
-- 🔄 **Database Copying**: Copy entire databases between MongoDB instances
-- 📊 **Database Management**: List databases, collections, and get statistics
-- 🔒 **Security**: Helmet for security headers, CORS support
-- 📝 **Logging**: Morgan for HTTP request logging
-- 🌍 **Environment**: Support for environment variables
-- 🏥 **Health Checks**: Built-in health check endpoint
+- 🔄 **Database Migration**: Copy entire databases between MongoDB instances
+- 📊 **Collection Management**: Select specific collections to migrate
+- 🎨 **Modern UI**: Clean, shadcn-inspired interface with dark theme
+- 📊 **Real-time Progress**: Live progress tracking during migrations
+- 🔒 **Security**: Helmet security headers, CORS support, secure sessions
+- 📝 **Logging**: Comprehensive request and error logging
+- 🌍 **Cloud Ready**: Optimized for Vercel deployment
+- 🏥 **Health Checks**: Built-in health monitoring
 
-## Installation
+## Quick Start
 
-1. Clone or download this project
+### Local Development
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd mongo-migrate
+   ```
+
 2. Install dependencies:
    ```bash
    npm install
    ```
 
+3. Create environment variables:
+   ```bash
+   cp .env.example .env
+   # Edit .env with your configuration
+   ```
+
+4. Start development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open `http://localhost:3000` in your browser
+
+### Vercel Deployment
+
+1. **Fork/Clone** this repository to your GitHub account
+
+2. **Connect to Vercel**:
+   - Go to [Vercel Dashboard](https://vercel.com/dashboard)
+   - Click "New Project"
+   - Import your GitHub repository
+
+3. **Configure Environment Variables** in Vercel:
+   ```env
+   NODE_ENV=production
+   SESSION_SECRET=your-super-secret-session-key-here
+   ```
+
+4. **Deploy**: Vercel will automatically build and deploy your app
+
+5. **Access**: Your app will be available at `https://your-app-name.vercel.app`
+
 ## Configuration
 
-Create a `.env` file in the root directory with your MongoDB connection strings:
+### Environment Variables
+
+Create a `.env` file (for local development):
 
 ```env
-SOURCE_URI=your_source_mongodb_uri
-TARGET_URI=your_target_mongodb_uri
-PORT=3000
+# Session Security (Required)
+SESSION_SECRET=your-super-secret-session-key-here
+
+# Environment
 NODE_ENV=development
+
+# Port (optional, defaults to 3000)
+PORT=3000
 ```
+
+### For Vercel Deployment
+
+Set these environment variables in your Vercel project dashboard:
+
+- `NODE_ENV`: Set to `production`
+- `SESSION_SECRET`: A secure random string for session encryption
 
 ## Usage
 
