@@ -1,0 +1,29 @@
+{
+  "name": "mongo-migrate",
+  "version": "1.0.0",
+  "description": "A modern web-based MongoDB database migration and backup tool with an intuitive interface",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:prod": "NODE_ENV=production node src/index.js",
+  "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aayush Chouhan",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0",
+    "mongodb": "^6.19.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
